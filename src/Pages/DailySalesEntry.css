@@ -1,0 +1,85 @@
+/* General Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-size: 14px;
+  }
+  
+  th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  /* Table Row Hover Effect */
+  tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Pagination Buttons */
+  .pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .pagination button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .pagination button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Table Actions (Edit & Download Buttons) */
+  td button {
+    padding: 8px 12px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Edit Button */
+  td button.edit-btn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  td button.edit-btn:hover {
+    background-color: #218838;
+  }
+  
+  /* Download Button */
+  td button.download-btn {
+    background-color: #ffc107;
+    color: black;
+  }
+  
+  td button.download-btn:hover {
+    background-color: #e0a800;
+  }
+  
+  td button:active {
+    transform: scale(0.98);
+  }
+  

@@ -1,0 +1,535 @@
+/* TrackPetrolSale.css */
+
+/* General Page Styles */
+.track-petrol-sale {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .actions {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .action-card {
+    border: 2px solid blue;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .action-card:hover {
+    background-color: #45a049;
+    transform: translateY(-5px);
+  }
+  
+  h3 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .refresh {
+    background-color: #f44336;
+  }
+  
+
+  
+  /* Modal Styles */
+  .slds-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .slds-modal__container {
+    background-color: #fff;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .slds-modal__header h1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .slds-form-element {
+    margin-bottom: 15px;
+  }
+  
+  .slds-form-element__label {
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .slds-input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .slds-button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
+  .slds-button_brand {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .slds-button_brand:hover {
+    background-color: #45a049;
+  }
+  
+  .slds-button_icon-inverse {
+    background-color: transparent;
+    border: none;
+    color: #333;
+  }
+  
+  .slds-modal__close {
+    position: absolute;
+    
+    right: 11% !important;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .slds-modal__close:hover {
+    color: red;
+  }
+  .full-width{
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    padding: 9px;
+    border: solid 1px lightgrey;
+  }
+  /* AddStockModal.css */
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top:5%;
+    margin-left:5%;
+    width: 80%;
+    
+  }
+  
+  .card-header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  h3, h4 {
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  /* Styling for form groups */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .text-right {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d;
+    border: none;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #565e64;
+  }
+  .upload-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 2px dotted #007bff;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    width:45%;
+  }
+  
+  .upload-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+  
+  .upload-button span {
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  .file-upload {
+    display: none; /* Hide the default file input */
+  }
+  
+  .drag-drop-area {
+    border: 2px dotted #007bff;
+    padding: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size:20px;
+  }
+  
+  /* Table Styling */
+  .meter-table {
+    max-height: 300px;
+    overflow-y: auto;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .meter-table th, .meter-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+    width:20%;
+  }
+  
+  .meter-table th {
+    background-color: #f1f1f1;
+  }
+  
+  .meter-table input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Card Footer */
+  .card-footer {
+    padding: 10px;
+    text-align: right;
+  }
+  
+  .card-footer button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .card-footer button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Submit Button */
+  .card-footer button.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+  }
+  
+  .card-footer button.btn-primary:hover {
+    background-color: #0056b3;
+  }
+  /* TrackPetrolSale.css */
+
+/* General Layout */
+.refresh-content {
+    margin-top: 20px;
+  }
+  
+  /* Price Report Section with Petrol/Diesel Tank Shape */
+  .price-report {
+   
+    justify-content:center;
+    gap:50px;
+    margin-bottom: 40px;
+  }
+  .price-report h4{
+    text-align: left !important;
+    margin-bottom: 20px;
+  }
+  
+  .tank-price {
+    width: 150px;
+    height: 200px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .tank-price h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .tank-price p {
+    font-size: 22px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .diesel {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .petrol {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  /* Sales Report Section with Rich Styling */
+  .sales-report {
+    margin-bottom: 40px;
+  }
+  
+  .sales-report h4 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  .total-cash {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: right;
+  }
+  
+  /* Tank Report Section with Graph-like Progress Bars */
+  .tank-report {
+    margin-top: 20px;
+  }
+  
+  .tank-report h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .tank {
+    width: 48%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .tank h5 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .progress-container p {
+    margin-bottom: 10px;
+  }
+  
+  .progress {
+    background-color: #e0e0e0;
+    height: 20px;
+    border-radius: 10px;
+  }
+  
+  .progress-bar {
+    background-color: #007bff;
+    height: 100%;
+    border-radius: 10px;
+  }
+  
+  .tank p {
+    font-size: 14px;
+    color: #555;
+  }
+  .tank-report1{
+    display:flex;
+    gap:40px;
+  }
+  .price-report1{
+    display: flex;
+    gap:40px;
+  }
+  .sales-report h4{
+    text-align: left;
+  }
+ .tank-report h4{
+    text-align: left;
+ }
+ .default{
+    background-color: antiquewhite;
+ }
+.sales-card{
+    background-color: #ddd;
+}
+/* src/components/AddOilSales.css */
+
+.add-oil-sales-content {
+  margin-top: 20px;
+}
+
+.add-oil-sales-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-oil-sales-card h4 {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.table th, .table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table td input {
+  width: 100%;
+  padding: 8px;
+}
+
+.submit-actions {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.submit-actions .btn {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+
+
+.submit-actions .btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.row-btn{
+  width:16% !important;
+  color:white !important;
+  font-weight: bold;
+  background-color: darkblue !important;
+  margin-bottom: 40px;
+
+}
+.sample-testing-actions{
+  gap: 20px;
+    display: flex;
+    justify-content: center;
+}
+.form-buttons{
+  display: flex;
+  justify-content: center;
+  gap:20px;
+}
+.expense-actions{
+  display: flex;
+  justify-content: center;
+  gap:20px;
+}
+.form-actions{
+  display: flex;
+  justify-content: center;
+  gap:20px;
+}
+.form-group .text-right{
+  display: flex;
+  justify-content: center;
+  gap:20px;
+}

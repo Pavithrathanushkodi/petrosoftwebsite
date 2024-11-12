@@ -1,0 +1,110 @@
+/* src/components/Header.css */
+.header {
+    font-family: Arial, sans-serif;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    position: relative; 
+    width: 80% !important;  
+}
+
+.search-input {
+    padding: 12px 40px 12px 10px;  /* Space for the icon inside the input */
+    font-size: 35px;
+    width: 100%;  /* Full width of the container */
+    border-radius: 30px;  /* Rounded corners */
+    border: 1px solid #ccc;  /* Subtle border */
+    outline: none;
+    transition: all 0.3s ease;  /* Smooth transition on focus */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Light shadow for depth */
+}
+
+/* Hover and focus effect for the input */
+.search-input:hover, .search-input:focus {
+    border-color: #f0a500;  /* Highlight the border on hover/focus */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);  /* Subtle larger shadow on focus */
+}
+
+.search-icon {
+    position: absolute;
+    right: 25px;  /* Position the icon 10px from the right side */
+    font-size: 34px;
+    color: #777;  /* Subtle grey color */
+    cursor: pointer;
+    transition: color 0.3s ease;  /* Smooth transition on hover */
+}
+
+/* Hover effect for the search icon */
+.search-icon:hover {
+    color: blue;  /* Highlight the icon on hover */
+}
+
+/* Remove button styles from the search icon (if used as a button) */
+.search-icon:focus, .search-icon:active {
+    outline: none;  /* Remove focus outline */
+    background: none;  /* No background */
+    border: none;  /* No border */
+}
+
+.user-menu {
+    position: relative;
+}
+
+.user-icon {
+    background: none;
+    border: none;
+    font-size: 48px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dropdown-menu ul li {
+    padding: 8px 0;
+}
+
+.dropdown-menu ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown-menu ul li a:hover {
+    color: #f0a500;
+}
+.logo-image{
+width: 100px!important;
+height: 100px !important;
+}
+/* For small screen sizes (e.g., mobile) */
+@media (max-width: 768px) {
+    .search-box {
+        width: 100%; /* Take full width on small screens */
+    }
+}

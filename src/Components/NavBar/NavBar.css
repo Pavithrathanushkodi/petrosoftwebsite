@@ -1,0 +1,51 @@
+/* src/components/NavBar.css */
+.navbar {
+  background-color: rgb(4, 4, 17);
+    text-align: center;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .navbar ul li {
+    display: inline;
+    margin: 0 20px;
+  }
+  
+  .navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .navbar ul li a:hover {
+    color: #f0a500;
+  }
+  .navbar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .navbar li {
+    display: inline;
+    margin-right: 15px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: black; /* Default color for links */
+    padding: 10px;
+  }
+  
+  .navbar .active-link {
+    color: red; /* Change to your preferred active color */
+    font-weight: bold; /* Optionally make the active link bold */
+  }
+  

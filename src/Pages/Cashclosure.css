@@ -1,0 +1,154 @@
+/* Cashclosure.css */
+
+/* Container for the entire cash closure page */
+.cash-closure-container {
+    padding: 20px;
+  }
+  
+  .cash-closure-header {
+    background-color: #f0f8ff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .cash-closure-header h1 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .cash-closure-header p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
+  }
+  
+  /* Button to generate cash */
+  .generate-cash-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .generate-cash-btn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Generated report styling */
+  .generated-report {
+    margin-top: 20px;
+  }
+  
+  /* Section for each part of the report */
+  .section {
+    margin-bottom: 20px;
+  }
+  
+  /* Table styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table, th, td {
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
+  
+  /* Textarea for comments */
+  textarea {
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    padding: 10px;
+  }
+  
+  /* Styling for section headers */
+  .section-header {
+    text-align: left;
+    background-color: burlywood; /* Background color */
+    color: white; /* Text color */
+    padding: 8px 12px; /* Add some padding */
+    margin: 0;
+    border-radius: 4px; /* Optional: Rounded corners */
+    margin-bottom: 40px;
+  }
+  
+  .section-header + table {
+    margin-top: 10px;
+  }
+  
+  /* Input fields and labels styling */
+  .input-group {
+    margin-bottom: 15px; /* Space between input fields */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .input-group label {
+    font-size: 14px;
+    color: grey; /* Grey color for labels */
+    margin-bottom: 5px; /* Space between label and input */
+  }
+  
+  .input-group input,
+  .input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .input-group input:read-only {
+    background-color: #f7f7f7; /* Light background for read-only inputs */
+  }
+  
+  /* Styling for action buttons */
+  .action-buttons {
+    margin-top: 20px;
+  }
+  
+  .action-buttons button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .action-buttons button:hover {
+    background-color: #0056b3;
+  }
+/* Styling for action buttons */
+.action-buttons {
+    margin-top: 20px;
+    display: flex; /* Flexbox container */
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 10px; /* Optional: Adds space between buttons */
+  }
+  
+  .action-buttons button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .action-buttons button:hover {
+    background-color: #0056b3;
+  }
+    
