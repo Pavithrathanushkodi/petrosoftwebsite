@@ -80,10 +80,10 @@ const AddExpense = () => {
 
         {/* Save and Cancel buttons */}
         <div className="expense-actions">
-          <button className="btn btn-success" onClick={handleSave}>
+          <button className="btn btn-primary" onClick={handleSave}>
             Save
           </button>
-          <button className="btn btn-danger" onClick={handleCancel}>
+          <button className="btn btn-secondary" onClick={handleCancel}>
             Cancel
           </button>
         </div>

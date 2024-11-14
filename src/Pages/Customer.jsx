@@ -94,7 +94,7 @@ const CustomerPage = () => {
         <h1>Customer Management</h1>
 
         {/* Add New Customer Button */}
-        <button onClick={() => handleModalOpen()} className="add-customer-btn">
+        <button onClick={() => handleModalOpen()} className="customer-btn">
           Add New Customer
         </button>
 
@@ -249,7 +249,7 @@ const CustomerPage = () => {
               </div>
 
               <div className="modal-actions">
-                <button onClick={handleSaveOrUpdate} className="save-btn">
+                <button onClick={handleSaveOrUpdate} className="update-btn">
                   {isEdit ? 'Update' : 'Save'}
                 </button>
                 <button onClick={handleModalClose} className="cancel-btn">

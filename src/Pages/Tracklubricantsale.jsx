@@ -102,40 +102,47 @@ const Tracklubricantsale = () => {
           {/* Tabs for Products and Invoices */}
           <div className="tab">
             <div className="tabs">
-              <button onClick={() => setActiveTab('products')} className={`tab-btn ${activeTab === 'products' ? 'active' : ''}`}>Products</button>
-              <button onClick={() => setActiveTab('invoices')} className={`tab-btn ${activeTab === 'invoices' ? 'active' : ''}`}>Invoices</button>
+              <button
+                onClick={() => setActiveTab('products')}
+                className={`tab-btn ${activeTab === 'products' ? 'active' : ''}`}
+              >
+                Products
+              </button>
+              <button
+                onClick={() => setActiveTab('invoices')}
+                className={`tab-btn ${activeTab === 'invoices' ? 'active' : ''}`}
+              >
+                Invoices
+              </button>
+            </div>
+            {/* Search Box inside the same div */}
+            <div className="search-container">
+              <input
+                type="text"
+                placeholder="Search products..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="search-box"
+              />
             </div>
           </div>
 
           {/* Content based on Active Tab */}
           {activeTab === 'products' && (
             <div className="products-section">
-              {/* Search Box */}
-              <div className="tab">
-                <div className="search-container">
-                  <input
-                    type="text"
-                    placeholder="Search products..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="search-box"
-                  />
+              <div className='cart'>
+                <div className="cart-icon" onClick={handleProceedToCheckout}>
+                  <FaShoppingCart size={30} />
+                  <span>{cartCount}</span>
                 </div>
-                <div className='cart'>
-                  <div className="cart-icon" onClick={handleProceedToCheckout}>
-                    <FaShoppingCart size={30} />
-                    <span>{cartCount}</span>
-                  </div>
-                  <button
-                    className={`proceed-btn ${cartCount === 0 ? 'disabled' : ''}`}
-                    onClick={handleProceedToCheckout}
-                    disabled={cartCount === 0}
-                  >
-                    Proceed to Checkout
-                  </button>
-                </div>
+                <button
+                  className={`proceed-btn ${cartCount === 0 ? 'disabled' : ''}`}
+                  onClick={handleProceedToCheckout}
+                  disabled={cartCount === 0}
+                >
+                  Proceed to Checkout
+                </button>
               </div>
-
               {/* Product List */}
               <div className="product-list">
                 {filteredProducts.map((product) => (
@@ -151,6 +158,7 @@ const Tracklubricantsale = () => {
                         <p>Stock: {product.stock}</p>
                         <p>GST: {product.gst}%</p>
                       </div>
+                      </div>
                       <div className="qty-input">
                         <input
                           type="number"
@@ -161,7 +169,7 @@ const Tracklubricantsale = () => {
                           className="quantity-input"
                         />
                       </div>
-                    </div>
+                    
                     <div className="add-to-cart">
                       <button
                         onClick={() => handleAddToCart(product, parseInt(document.getElementById(`qty-${product.id}`).value))}
@@ -170,11 +178,9 @@ const Tracklubricantsale = () => {
                       >
                         Add to Cart
                       </button>
-                   
-                    {/* Close icon to remove product */}
-                    <button className="remove-product-btn" onClick={() => handleRemoveFromCart(product.id)}>
-                      <FaTimes />
-                    </button>
+                      <button className="remove-product-btn" onClick={() => handleRemoveFromCart(product.id)}>
+                        <FaTimes />
+                      </button>
                     </div>
                   </div>
                 ))}
@@ -310,6 +316,7 @@ const Tracklubricantsale = () => {
         }
         .cart {
           display: flex;
+          justify-content:flex-end;
           gap: 20px;
         }
         .cart-icon {
@@ -326,7 +333,7 @@ const Tracklubricantsale = () => {
           padding: 4px;
         }
         .proceed-btn {
-          background-color: #007bff;
+          background-color: darkblue;
           color: white;
           padding: 10px 20px;
           cursor: pointer;
@@ -344,9 +351,10 @@ const Tracklubricantsale = () => {
           padding: 10px 20px;
           margin-right: 10px;
           cursor: pointer;
-          background-color: #007bff;
+          background-color: darkblue;
           color: white;
           border: none;
+
         }
         .tab-btn.active {
           background-color: #0056b3;
@@ -369,8 +377,10 @@ const Tracklubricantsale = () => {
           margin-bottom: 20px;
         }
         .search-box {
-          width: 300px;
-          padding: 10px;
+              width: 430px !important;
+    border: solid 2px darkblue;
+    border-radius: 20px;
+    font-size: 20px;
         }
         .product-list {
           display: flex;
@@ -387,7 +397,6 @@ const Tracklubricantsale = () => {
         }
         .product-image {
           width: 20%;
-          height: 120px;
           overflow: hidden;
         }
         .product-image img {
@@ -400,23 +409,32 @@ const Tracklubricantsale = () => {
           padding: 0 20px;
         }
         .quantity-input {
-          width: 60px;
+          width: 75px;
           margin-top: 10px;
           padding: 5px;
+          text-align:center;
+          font-size:30px;
+          border:solid 1px;
         }
         .add-to-cart-btn {
-          display: flex;
           align-items: center;
-          background-color: green;
-          color: white;
-          border: none;
-          padding: 8px 16px;
-          cursor: pointer;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    height: 58px;
+    width: 200px;
+    font-size: 27px;
+    display: flex;
+    justify-content: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif !important;
         }
         .remove-product-btn {
           background: none;
           border: none;
-          color: red;
+          color: black;
           cursor: pointer;
           font-size: 18px;
         }
@@ -451,6 +469,47 @@ const Tracklubricantsale = () => {
           display:flex;
           align-items:center;
           }
+           .tab-btn {
+          padding: 10px 20px;
+          margin-right: 10px;
+          cursor: pointer;
+          background-color: ${activeTab === 'products' ? 'darkblue' : 'lightgrey'};
+          color: white;
+          border: none;
+          font-size:18px;
+          font-family:Verdana, Geneva, Tahoma, sans-serif !important;
+          border-radius:20px;
+        }
+        .tab-btn.active {
+          background-color: darkblue;
+        }
+        .tab {
+          display: flex;
+          justify-content: space-between;
+        }
+        .tabs {
+          display: flex;
+          margin-bottom: 20px;
+        }
+        .search-container {
+          display: flex;
+          align-items: center;
+          margin-left: 10px;
+        }
+        .search-box {
+          width: 250px;
+          padding: 10px;
+        }
+        .product-details h5{
+        font-size:28px;
+        color:darkblue;
+        font-family:Verdana, Geneva, Tahoma, sans-serif !important;
+        }
+        .product-details p{
+        font-size:28px;
+        color:grey;
+        font-family:Verdana, Geneva, Tahoma, sans-serif !important;
+        }
       `}
       </style>
     </div>

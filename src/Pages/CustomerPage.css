@@ -53,11 +53,15 @@
     background: white;
     padding: 20px;
     border-radius: 8px;
-    width: 400px;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
   }
   
   .form-group {
     margin-bottom: 15px;
+    width:50%;
   }
   
   .form-group label {
@@ -75,6 +79,7 @@
   .modal-actions {
     display: flex;
     justify-content: space-between;
+    gap:20px;
   }
   
   .save-btn,
@@ -102,4 +107,41 @@
     background-color: #da190b;
   }
   
-  
+  .customer-btn{
+    background-color:white;
+  width:20% !important;
+  height:60px !important;
+  border-radius: 15px;
+  border:1px solid darkblue;
+  font-size: 20px;
+  font-weight: bold;
+  color:darkblue!important;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .edit-btn{
+    background-color:darkblue !important;
+  width:50% !important;
+  height:48px !important;
+  border-radius: 15px;
+  font-size: 20px;
+  color:white !important;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .update-btn{
+    background-color:darkblue !important;
+  width:55% !important;
+  height:60px !important;
+  border-radius: 15px;
+  font-size: 30px;
+  color:white !important;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .cancel-btn{
+    background-color:lightgray!important;
+  width:55% !important;
+  height:60px !important;
+  border-radius: 15px;
+  font-size: 30px;
+  color:black!important;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }

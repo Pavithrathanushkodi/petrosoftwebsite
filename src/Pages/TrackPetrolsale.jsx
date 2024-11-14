@@ -7,7 +7,6 @@ import AddStockModal from '../Tracksalesbutton/Addstock';
 import AddMeterReadingModal from '../Tracksalesbutton/Addmeterreadingmodal';
 import AddDailySales from '../Tracksalesbutton/AddDailySales';
 import AddCreditSalesForm from '../Tracksalesbutton/AddCreditSalesForm'; // Import the new form component
-import 'bootstrap/dist/css/bootstrap.min.css';
 import SampleTesting from '../Tracksalesbutton/SampleTesting';
 import AddExpense from '../Tracksalesbutton/AddExpense';
 import AddOilSales from '../Tracksalesbutton/Addoilsales';
@@ -23,72 +22,53 @@ const Trackpetrolsale = () => {
   return (
     <div className="track-petrol-sale">
       <Header />
-      <div className="row">
-        {/* Left Column (col-3) for Action Cards */}
-        <div className="col-3">
-          <div className="actions">
-            <div className="action-card add-stock" onClick={() => handleCardClick('Add Stock')}>
-              <h3>Add Stock</h3>
-            </div>
-            <div className="action-card add-meter" onClick={() => handleCardClick('Add Meter Reading')}>
-              <h3>Add Meter Reading</h3>
-            </div>
-            <div className="action-card add-sales" onClick={() => handleCardClick('Add Daily Sales')}>
-              <h3>Add Daily Sales</h3>
-            </div>
-            <div className="action-card add-credit" onClick={() => handleCardClick('Add Credit Sales')}>
-              <h3>Add Credit Sales</h3>
-            </div>
-            <div className="action-card add-credit" onClick={() => handleCardClick('Sample Testing')}>
-              <h3>Sample Testing</h3>
-            </div>
-            <div className="action-card add-expense" onClick={() => handleCardClick('Add Expense')}>
-              <h3>Add Expense</h3>
-            </div>
-            <div className="action-card add-oil" onClick={() => handleCardClick('Add Oil Sales')}>
-              <h3>Add Oil Sales</h3>
-            </div>
-            <div className="action-card refresh" onClick={() => handleCardClick('Refresh')}>
-              <h3>Refresh</h3>
-            </div>
-          </div>
-        </div>
+   
+      {/* Left Column (col-3) for Action Cards */}
+      <div className="actions">
+        <ActionCard title="Add Stock" onClick={() => handleCardClick('Add Stock')} />
+        <ActionCard title="Add Meter Reading" onClick={() => handleCardClick('Add Meter Reading')} />
+        <ActionCard title="Add Daily Sales" onClick={() => handleCardClick('Add Daily Sales')} />
+        <ActionCard title="Add Credit Sales" onClick={() => handleCardClick('Add Credit Sales')} />
+        <ActionCard title="Sample Testing" onClick={() => handleCardClick('Sample Testing')} />
+        <ActionCard title="Add Expense" onClick={() => handleCardClick('Add Expense')} />
+        <ActionCard title="Add Oil Sales" onClick={() => handleCardClick('Add Oil Sales')} />
+        <ActionCard title="Refresh" onClick={() => handleCardClick('Refresh')} />
+      </div>
 
-        {/* Right Column (col-8) for Form Content */}
-        <div className="col-8">
-          {/* Conditionally Render Form/Content Based on Active Content */}
-          {activeContent === 'Add Stock' && <AddStockModal />}
-          {activeContent === 'Add Meter Reading' && <AddMeterReadingModal />}
-          {activeContent === 'Add Daily Sales' && <AddDailySales />}
-          {activeContent === 'Add Credit Sales' && <AddCreditSalesForm />} {/* Add Credit Sales Form */}
-          {activeContent === 'Add Expense' && <AddExpense />}
-          {activeContent === 'Add Oil Sales' && <AddOilSales />}
+      {/* Right Column (col-8) for Form Content */}
+      <div className="form-content">
+        {/* Conditionally Render Form/Content Based on Active Content */}
+        {activeContent === 'Add Stock' && <AddStockModal />}
+        {activeContent === 'Add Meter Reading' && <AddMeterReadingModal />}
+        {activeContent === 'Add Daily Sales' && <AddDailySales />}
+        {activeContent === 'Add Credit Sales' && <AddCreditSalesForm />}
+        {activeContent === 'Add Expense' && <AddExpense />}
+        {activeContent === 'Add Oil Sales' && <AddOilSales />}
+        {activeContent === 'Sample Testing' && <SampleTesting />}
 
-          {/* Render Sample Testing Component when the "Sample Testing" button is clicked */}
-          {activeContent === 'Sample Testing' && <SampleTesting />}
-
-          {/* Default "Refresh" content shown when page is loaded or when Refresh is clicked */}
-          {activeContent === 'Refresh' && (
-            <div className="refresh-content">
-              {/* Price Report Section styled like petrol/diesel tank */}
-              <div className="price-report">
-                <h4>Price Report</h4>
-                <div className="price-report1">
-                  <div className="tank-price diesel">
-                    <h4>Diesel Price</h4>
-                    <p>₹93.58</p>
-                  </div>
-                  <div className="tank-price petrol">
-                    <h4>Petrol Price</h4>
-                    <p>₹101.98</p>
-                  </div>
+        {/* Default "Refresh" content shown when page is loaded or when Refresh is clicked */}
+        {activeContent === 'Refresh' && (
+          <div className="refresh-content">
+            {/* Price Report Section */}
+            <div className="price-report">
+              <h4>Price Report</h4>
+              <div className="price-report1">
+                <div className="tank-price diesel">
+                  <h4>Diesel Price</h4>
+                  <p>₹93.58</p>
+                </div>
+                <div className="tank-price petrol">
+                  <h4>Petrol Price</h4>
+                  <p>₹101.98</p>
                 </div>
               </div>
+            </div>
 
-              {/* Sales Report Section with Rich Look */}
-              <div className="sales-report">
-                <h4>Today's Sales Report</h4>
-                <table className="table table-bordered">
+            {/* Sales Report Section */}
+            <div className="sales-report">
+              <h4>Today's Sales Report</h4>
+              <div className='tab-but'>
+                <table className="table price-table">
                   <thead>
                     <tr>
                       <th>Product Name</th>
@@ -122,42 +102,59 @@ const Trackpetrolsale = () => {
                   <h5>Total Cash in Hand: ₹3,02,759.08</h5>
                 </div>
               </div>
+            </div>
 
-              {/* Tank Report Section */}
-              <div className="tank-report">
-                <h4>Tank Report</h4>
-                <div className="tank-report1">
-                  <div className="tank diesel-tank">
+            {/* Tank Report Section */}
+            <div className="tank-report">
+              <h4>Tank Report</h4>
+              <div className="tank-report1">
+                <div className="tank diesel-tank">
+                  
+                  <div className="progress-container">
                     <h5>Diesel Tank</h5>
-                    <div className="progress-container">
-                      <p><strong>Capacity:</strong> 20,000 Liters</p>
-                      <p><strong>Min Capacity:</strong> 2,000 Liters</p>
-                      <p><strong>Available Stock:</strong> 11,947.91 Liters</p>
-                      <div className="progress">
-                        <div className="progress-bar" style={{ width: '59.74%' }}></div>
-                      </div>
-                      <p>Fuel: 59.74%</p>
+                    <h4>Capacity:</h4>
+                    <h3>20,000 Litres</h3>
+                    <h4>Min Capacity:</h4>
+                    <h3>2,000 Liters</h3>
+                    <h4>Available Stock:</h4>
+                    <h3>11,947.91 Liters</h3>
+                    <div className="progress">
+                      <div className="progress-bar" style={{ width: '59.74%' }}></div>
                     </div>
+                    <p>Fuel: 59.74%</p>
                   </div>
+                </div>
 
-                  <div className="tank petrol-tank">
-                    <h5>Petrol Tank</h5>
-                    <div className="progress-container">
-                      <p><strong>Capacity:</strong> 20,000 Liters</p>
-                      <p><strong>Min Capacity:</strong> 2,000 Liters</p>
-                      <p><strong>Available Stock:</strong> 17,720.41 Liters</p>
-                      <div className="progress">
-                        <div className="progress-bar" style={{ width: '88.6%' }}></div>
-                      </div>
-                      <p>Fuel: 88.6%</p>
+                <div className="tank petrol-tank">
+                 
+                  <div className="progress-container">
+                  <h5>Petrol Tank</h5>
+                  <h4>Capacity:</h4>
+                    <h3>20,000 Litres</h3>
+                    <h4>Min Capacity:</h4>
+                    <h3>2,000 Liters</h3>
+                    <h4>Available Stock:</h4>
+                    <h3>17,947.91 Liters</h3>
+                    <div className="progress">
+                      <div className="progress-bar" style={{ width: '88.6%' }}></div>
                     </div>
+                    <p>Fuel: 88.6%</p>
                   </div>
                 </div>
               </div>
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </div>
+    </div>
+  );
+};
+
+// Action Card Component
+const ActionCard = ({ title, onClick }) => {
+  return (
+    <div className="action-card" onClick={onClick}>
+      <h3>{title}</h3>
     </div>
   );
 };

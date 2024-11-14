@@ -22,10 +22,13 @@
     cursor: pointer;
     margin-right: 10px;
     transition: background-color 0.3s ease;
+    border-radius: 8px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:18px;
   }
   
   .tab-btn.active {
-    background-color: #007bff;
+    background-color: darkblue;
     color: white;
   }
   
@@ -55,7 +58,7 @@
   
   .action-btn {
     padding: 8px 15px;
-    background-color: #007bff;
+    background-color: darkblue;
     color: white;
     border: none;
     border-radius: 4px;
@@ -64,7 +67,7 @@
   }
   
   .action-btn:hover {
-    background-color: #0056b3;
+    background-color: darkblue;
   }
   
   /* Credit Summary Report Form */
@@ -95,16 +98,23 @@
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 24px;
+    color:grey;
   }
   
   .search-btn {
     padding: 10px 20px;
-    background-color: #28a745;
+    background-color: darkblue !important;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     margin-top: 10px;
+    width:40%;
+    height:60px !important;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 8px;
   }
   
   .search-btn:hover {
@@ -112,5 +122,11 @@
   }
   .buttons{
     display: flex !important;
+  }
+  .form-group select{
+    width:150% !important;
+  }
+  .form-group input{
+    width:150px !important;
   }
   

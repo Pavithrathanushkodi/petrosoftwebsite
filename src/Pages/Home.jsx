@@ -12,10 +12,9 @@ const Home = () => {
       {/* Navigation Bar */}
       <nav className="subnav">
         <ul>
-          <li><a href="#home-section">Home</a></li>
           <li><a href="#about-section">About</a></li>
           <li><a href="#price-report-section">Price Report</a></li>
-          <li><a href="#footer-section">Footer</a></li>
+         
         </ul>
       </nav>
 

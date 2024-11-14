@@ -155,7 +155,7 @@ const AddOilSales = () => {
 
         {/* Submit Button */}
         <div className="submit-actions">
-          <button className="btn btn-success" onClick={handleSubmit}>
+          <button className="btn btn-primary" onClick={handleSubmit}>
             Submit
           </button>
         </div>

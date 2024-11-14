@@ -41,7 +41,7 @@ const AddCreditSalesForm = () => {
 
   return (
     <div className="add-credit-sales-form card">
-      <h3>Add Credit Sales</h3>
+      <h4>Add Credit Sales</h4>
       <form>
         <div className="form-group">
           <label>Product Name</label>

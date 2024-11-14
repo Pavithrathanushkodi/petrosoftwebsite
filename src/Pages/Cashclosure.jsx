@@ -23,7 +23,7 @@ function CashClosure() {
       <h1>Cash Closure</h1>
 
       {/* Button to generate cash */}
-      <button onClick={handleGenerateCash} className="generate-cash-btn">
+      <button onClick={handleGenerateCash} className="generate-cash-btn btn-primary">
         Generate Cash
       </button>
 

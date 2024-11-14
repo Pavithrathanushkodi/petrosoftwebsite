@@ -51,10 +51,10 @@ const SampleTesting = () => {
         </table>
 
         <div className="sample-testing-actions">
-          <button className="btn btn-success" onClick={handleSave}>
+          <button className="btn btn-primary" onClick={handleSave}>
             Save
           </button>
-          <button className="btn btn-danger" onClick={handleCancel}>
+          <button className="btn btn-secondary" onClick={handleCancel}>
             Cancel
           </button>
         </div>

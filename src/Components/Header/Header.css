@@ -1,77 +1,71 @@
-/* src/components/Header.css */
+/* General header styles */
 .header {
-    font-family: Arial, sans-serif;
-}
-
-.top-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+  }
+  
+  .top-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.search-box {
+    width: 100%;
+  }
+  
+  .logo-image {
+    height: 40px; /* Adjust the logo size */
+  }
+  
+  .search-box {
     display: flex;
     align-items: center;
-    position: relative; 
-    width: 80% !important;  
-}
-
-.search-input {
+    width: 80%;  /* Take up 80% width for search box */
+  }
+  
+  .search-input {
     padding: 12px 40px 12px 10px;  /* Space for the icon inside the input */
-    font-size: 35px;
+    font-size: 16px;
     width: 100%;  /* Full width of the container */
     border-radius: 30px;  /* Rounded corners */
     border: 1px solid #ccc;  /* Subtle border */
     outline: none;
     transition: all 0.3s ease;  /* Smooth transition on focus */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Light shadow for depth */
-}
-
-/* Hover and focus effect for the input */
-.search-input:hover, .search-input:focus {
+  }
+  
+  .search-input:hover, .search-input:focus {
     border-color: #f0a500;  /* Highlight the border on hover/focus */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);  /* Subtle larger shadow on focus */
-}
-
-.search-icon {
+  }
+  
+  .search-icon {
     position: absolute;
-    right: 25px;  /* Position the icon 10px from the right side */
-    font-size: 34px;
+    right: 160px;  /* Position the icon 10px from the right side */
+    font-size: 24px;
     color: #777;  /* Subtle grey color */
     cursor: pointer;
     transition: color 0.3s ease;  /* Smooth transition on hover */
-}
-
-/* Hover effect for the search icon */
-.search-icon:hover {
+  }
+  
+  .search-icon:hover {
     color: blue;  /* Highlight the icon on hover */
-}
-
-/* Remove button styles from the search icon (if used as a button) */
-.search-icon:focus, .search-icon:active {
-    outline: none;  /* Remove focus outline */
-    background: none;  /* No background */
-    border: none;  /* No border */
-}
-
-.user-menu {
+  }
+  
+  .user-menu {
     position: relative;
-}
-
-.user-icon {
+  }
+  
+  .user-icon {
     background: none;
     border: none;
     font-size: 48px;
     cursor: pointer;
-}
-
-.dropdown-menu {
+  }
+  
+  .dropdown-menu {
     position: absolute;
     top: 30px;
     right: 0;
@@ -79,32 +73,152 @@
     color: #333;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 10px;
-}
-
-.dropdown-menu ul {
+  }
+  
+  .dropdown-menu ul {
     list-style: none;
     padding: 0;
-}
-
-.dropdown-menu ul li {
+  }
+  
+  .dropdown-menu ul li {
     padding: 8px 0;
-}
-
-.dropdown-menu ul li a {
+  }
+  
+  .dropdown-menu ul li a {
     text-decoration: none;
     color: #333;
-}
-
-.dropdown-menu ul li a:hover {
+  }
+  
+  .dropdown-menu ul li a:hover {
     color: #f0a500;
-}
-.logo-image{
-width: 100px!important;
-height: 100px !important;
-}
-/* For small screen sizes (e.g., mobile) */
-@media (max-width: 768px) {
-    .search-box {
-        width: 100%; /* Take full width on small screens */
+  }
+  
+  .logo-image {
+    width: 100px;
+    height: 100px;
+  }
+  
+  /* Navbar for mobile view */
+  .navbar-container {
+    display: none; /* Hide by default */
+    flex-direction: column;
+    background-color: #f0f0f0;
+    position: absolute;
+    top: 60px; /* Adjust based on the header height */
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+  
+  .navbar-container.open {
+    display: flex; /* Show when menu is open */
+  }
+  
+  .navbar-container .close-icon {
+    align-self: flex-end;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  /* Desktop Navbar */
+  .desktop-navbar {
+    display: flex;
+    justify-content: center;
+    background-color: darkblue;/* Hidden by default */
+    width: 100%; /* Full width */
+  }
+  
+  .navbar ul {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .navbar li {
+    padding: 10px 20px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+  
+  .navbar a:hover,
+  .navbar a.active-link {
+    color: #007bff;  /* Change color on hover and active */
+  }
+  
+  /* Media Query for Mobile View */
+  @media (max-width: 768px) {
+    .top-header {
+      justify-content: space-between;
     }
-}
+  
+    .search-box {
+      display: none; /* Hide search box on mobile */
+    }
+  
+    .user-menu {
+      display: none; /* Hide user icon on mobile */
+    }
+  
+    .hamburger-icon {
+      display: block; /* Show hamburger icon */
+      cursor: pointer;
+    }
+  
+    .desktop-navbar {
+      display: none !important; /* Hide desktop navbar on mobile */
+    }
+  
+    /* Mobile Navbar Styles */
+    .navbar-container.open {
+      display: flex; /* Show the mobile menu when open */
+    }
+    .navbar{
+        background-color: white !important;
+    }
+  
+    .navbar ul {
+      flex-direction: column; /* Stack the items vertically in mobile */
+      justify-content: flex-start !important; /* Align items to the top */
+      width: 100%;
+    }
+    .navbar ul {
+        list-style: none;
+        display: flex;
+        align-items: flex-start;
+        padding: 20px !important;
+    }
+  
+    .navbar li {
+      padding: 15px;
+      text-align: center; /* Center align text in mobile */
+    }
+  }
+  
+  @media (min-width: 769px) {
+    /* Desktop view styles */
+    .desktop-navbar {
+      display: block; /* Show desktop navbar */
+    }
+  
+    .hamburger-icon {
+      display: none; /* Hide hamburger icon on desktop */
+    }
+  
+    .navbar-container {
+      display: none !important; /* Keep mobile navbar hidden on desktop */
+    }
+  }
+  @media (min-width: 769px) and (max-width: 1064px) {
+    .navbar ul li a {
+        font-size: 10px !important;
+    }
+  }
+  

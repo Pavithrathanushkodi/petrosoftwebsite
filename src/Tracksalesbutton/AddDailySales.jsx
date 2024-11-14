@@ -38,8 +38,8 @@ const AddDailySales = () => {
 
   return (
     <div className='sales-card card'>
-    <div className="add-daily-sales-form">
-      <h4>Add Daily Sales</h4>
+    <div className="add-daily-sales-form card-header">
+      <h3>Add Daily Sales</h3>
       <form onSubmit={handleFormSubmit}>
         <div className="form-group">
           <label htmlFor="product">Select Product</label>

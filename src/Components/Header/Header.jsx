@@ -1,22 +1,28 @@
 // src/components/Header.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaSearch, FaUser } from 'react-icons/fa'; // Icons for search and user
-import './Header.css'; // Optional styling for 
+import { FaSearch, FaUser, FaBars, FaTimes } from 'react-icons/fa'; // Icons for search, user, hamburger, and close
+import './Header.css'; // Optional styling for header
 import NavBar from '../NavBar/NavBar';
+
 function Header() {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const [isMenuOpen, setMenuOpen] = useState(false); // State for the mobile menu
 
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
   };
 
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen); // Toggle the mobile menu visibility
+  };
+
   return (
     <header className="header">
-      {/* First header section: Logo, Search Box, User */}
+      {/* Top header section: Logo, Search Box, User Icon */}
       <div className="top-header">
-      <img src="/images/image (7).png" alt="Logo" className="logo-image" />
-
+        {/* Logo */}
+        <img src="/images/image (7).png" alt="Logo" className="logo-image" />
 
         {/* Search Box */}
         <div className="search-box">
@@ -30,7 +36,7 @@ function Header() {
           </div>
         </div>
 
-        {/* User Dropdown */}
+        {/* User Icon */}
         <div className="user-menu">
           <button className="user-icon" onClick={toggleDropdown}>
             <FaUser />
@@ -45,10 +51,25 @@ function Header() {
             </div>
           )}
         </div>
+
+        {/* Hamburger Icon (Mobile) */}
+        <div className="hamburger-icon" onClick={toggleMenu}>
+          <FaBars />
+        </div>
       </div>
 
-      {/* Second header section: Navbar with menu links */}
-     <NavBar />
+      {/* Mobile Navbar (only shown when hamburger is clicked) */}
+      <div className={`navbar-container ${isMenuOpen ? 'open' : ''}`}>
+        <div className="close-icon" onClick={toggleMenu}>
+          <FaTimes />
+        </div>
+        <NavBar />
+      </div>
+
+      {/* Desktop Navbar (always visible below the top header in desktop view) */}
+      <div className="desktop-navbar">
+        <NavBar />
+      </div>
     </header>
   );
 }

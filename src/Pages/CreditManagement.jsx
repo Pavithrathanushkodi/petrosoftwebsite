@@ -62,7 +62,7 @@ function CreditManagement() {
 
       {/* Customer Credit Summary Report Tab */}
       {activeTab === "customerCredits" && (
-        <div className="customer-credit-content">
+        <div className="customer-credit-content card">
           <h2>Customer Credit Summary Report</h2>
           <table>
             <thead>
@@ -114,7 +114,7 @@ function CreditManagement() {
 
       {/* Credit Summary Report Tab */}
       {activeTab === "creditSummaryReport" && (
-        <div className="credit-summary-report">
+        <div className="credit-summary-report card">
           <h2>Credit Summary Report</h2>
           <div className="filter-form">
             <div className="form-group">

@@ -7,7 +7,7 @@ function NavBar() {
     <nav className="navbar">
       <ul>
         <li><NavLink to="/" activeClassName="active-link">Home</NavLink></li>
-        <li><NavLink to="/trackpetrolsale" activeClassName="active-link">Track Petrol Sale</NavLink></li>
+        <li><NavLink to="/trackpetrolsale" activeClassName="active-link">Track Sale</NavLink></li>
         <li><NavLink to="/tracklubricantsale" activeClassName="active-link">Oil Categories</NavLink></li>
         <li><NavLink to="/cashclosure" activeClassName="active-link">Cash Closure</NavLink></li>
         <li><NavLink to="/CreditManagement" activeClassName="active-link">Credit Management</NavLink></li>

@@ -1,11 +1,12 @@
 /* src/components/NavBar.css */
 .navbar {
-  background-color: rgb(4, 4, 17);
+  background-color: darkblue !important;
     text-align: center;
     padding: 10px 0;
     display: flex;
     justify-content: center !important;
     align-items: center !important;
+    border-radius: 20px;
   }
   
   .navbar ul {
@@ -16,17 +17,21 @@
   .navbar ul li {
     display: inline;
     margin: 0 20px;
+    margin-left:-30px !important;
+  
   }
   
   .navbar ul li a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   
   .navbar ul li a:hover {
-    color: #f0a500;
+    color: rgba(255, 255, 0, 0.818);
+  
   }
   .navbar ul {
     list-style-type: none;

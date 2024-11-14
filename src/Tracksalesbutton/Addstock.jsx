@@ -97,7 +97,7 @@ const AddStockModal = ({ isOpen, onClose }) => {
             <div className="form-group text-right">
               <button
                 type="button"
-                className="btn btn-primary"
+                className="btn btn-primary stock-btn"
                 onClick={handleNextStep}
               >
                 Next
